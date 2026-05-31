@@ -1,0 +1,47 @@
+<div class = "admin-container">
+    <h1>Supervision Technique des Gares</h1>
+    <span class="refresh-indicator">🔄 Prochaine actualisation automatique...</span>
+    
+    <table class ="station-table">
+        <thead>
+            <tr>
+                <th>Gare</th>
+                <th>Adresse IP</th>
+                <th>Statut</th>
+                <th>État du lecteur</th>
+                <th>Playlist en cours</th>
+                <th>Version</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (station of stations; track station.id) {
+                <tr>
+                    <td>{{ station.nom }}</td>
+                    <td><code>{{ station.adresseIp }}</code></td>
+                    <td>
+                        <div class="source-badge" [ngClass]="station.currentSource">
+                            {{ station.currentSource === 'server' ? 'Serveur' : 'Local' }}
+                        </div>
+                    </td>
+                    <td>
+                        <span class="status-badge" [ngClass]="station.etat">
+                            {{ station.etat === 'online' ? '● En ligne' : '○ Hors-ligne' }}
+                        </span>
+                    </td> 
+                    <td>
+                        <span class="playlist-label">
+                        {{ station.currentPlaylist || 'Chargement...' }}
+                        </span>
+                    </td>
+                    <td>{{ station.version || 'Inconnue' }}</td>
+                    <td>
+                        <button (click)="refreshStatus(station)">Actualiser</button>
+                        <button class="btn-stop" (click)="stopAndRefresh(station)">
+                            Arrêter
+                        </button>
+                    </td>   
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

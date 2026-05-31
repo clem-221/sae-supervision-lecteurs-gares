@@ -1,0 +1,74 @@
+<div class="retail-container">
+  <h2>Gestion des Ambiances Musicales</h2>
+
+  <section class="station-selector">
+    <h3>1. Choisir une gare</h3>
+    <div class="grid">
+      @for (station of stations; track station.id) {
+        <div class="card" (click)="onSelectStation(station)" [class.active]="selectedStation?.id === station.id">
+          <h4>{{ station.nom }}</h4>
+          <p>{{ station.adresseIp }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  @if (selectedStation) {
+    <section class="playlist-manager">
+      <h3>2. Playlists disponibles pour {{ selectedStation.nom }}</h3>
+      <div class="playlist-list">
+        @for (pl of playlists; track pl) {
+          <div class="playlist-item">
+            <span>{{ pl }}</span>
+            <button (click)="changePlaylist(pl)">Lancer</button>
+          </div>
+        } @empty {
+          <p>Aucune playlist trouvée sur ce lecteur.</p>
+        }
+      </div>
+    </section>
+  }
+  @if (selectedStation) {
+    <section class="playlist-manager">
+        <h3>Gestion pour {{ selectedStation.nom }}</h3>
+        <div class="playlist-section">
+        <h4><i class="icon-cloud"></i> Playlists du Serveur Central</h4>
+        <p class="description">Ces playlists sont identiques pour toutes les gares.</p>
+        <div class="playlist-grid">
+            @for (pl of serverPlaylists; track pl) {
+            <button class="btn-server" (click)="changePlaylist(pl, false)">
+                Diffuser {{ pl }}
+            </button>
+            }
+        </div>
+        </div>
+
+        <hr>
+
+        <div class="playlist-section local-mode">
+        <h4><i class="icon-hdd"></i> Playlist de Secours (Locale)</h4>
+        <p class="description">Utilisée automatiquement si la connexion au serveur est coupée.</p>
+        <div class="local-card">
+            <span>{{ localPlaylist }}</span>
+            <button class="btn-local" (click)="changePlaylist(localPlaylist, true)">
+              Forcer le mode local
+            </button>
+        </div>
+        </div>
+    </section>
+    }
+
+    @if (selectedStation) {
+        <div class="status-banner" [ngClass]="selectedStation.currentSource">
+            @if (selectedStation.currentSource === 'server') {
+            <span class="source-label">
+                <i class="cloud-icon">☁</i> Diffusion en direct du serveur
+            </span>
+            } @else {
+            <span class="source-label warning">
+                <i class="local-icon">⚠</i> Mode Local (Secours actif)
+            </span>
+            }
+        </div>
+    }
+</div>
