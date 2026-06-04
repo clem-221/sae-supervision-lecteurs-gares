@@ -7,6 +7,7 @@ import { Draggable } from '@fullcalendar/interaction';
 import dayGridPlugin  from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import frLocale from '@fullcalendar/core/locales/fr';
 
 @Component({
   selector: 'app-calendrier-playlist-component',
@@ -40,7 +41,9 @@ export class CalendrierPlaylistComponent implements OnInit {
   calendarOptions: CalendarOptions = {
     initialView: 'timeGridWeek', // Vue semaine avec horaires
     plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+    locale: frLocale,
     editable: true,
+    eventResizableFromStart: true, // Permet d'étirer vers le haut
     droppable: true, // Autorise le dépôt
     headerToolbar: {
       left: 'prev,next today',

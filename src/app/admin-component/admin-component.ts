@@ -115,13 +115,13 @@ export class AdminComponent  implements OnInit, OnDestroy{
               
               this.stations[index].trackType = state.trackType;
               
-              // Ton test de serveur
               if (this.stations[index].adresseIp === this.volumioService.SERVER_IP) {
                 this.stations[index].currentSource = 'server';
               } else {
                 this.stations[index].currentSource = 'local';
               }
             }
+            this.cdr.markForCheck(); // On demande à Angular de vérifier les changements pour cette gare
         }); 
         },
         error: (err) => {
