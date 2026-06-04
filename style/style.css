@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les formulaires horizontalement */
+    gap: 40px;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.formulaire {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.2s;
+}
+
+/* ==========================================
+   BLOC REGISTER (Thème Serveur - Bleu)
+   ========================================== */
+.register {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+    border-radius: 30px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.register h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.register button {
+    border: 1px solid #bbdefb;
+    background-color: #1976d2;
+    color: white;
+}
+
+.register button:hover { background-color: #115293; }
+
+.register .formulaire input,
+.register .formulaire select {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #bbdefb;
+    background-color: #ffffff;
+    color: #1976d2;
+    transition: all 0.3s ease;
+}
+
+.register .formulaire input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.4);
+}
+
+/* ==========================================
+   BLOC LOGIN (Thème Local - Orange)
+   ========================================== */
+.login {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffe0b2;
+    border-radius: 30px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.login h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login button {
+    border: 1px solid #ffe0b2;
+    background-color: #e65100;
+    color: white;
+}
+
+.login button:hover { background-color: #b33f00; }
+
+.login .formulaire input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ffe0b2;
+    background-color: #ffffff;
+    color: #e65100;
+    transition: all 0.3s ease;
+}
+
+.login .formulaire input:focus {
+    outline: none;
+    border-color: #e65100;
+    box-shadow: 0 0 5px rgba(230, 81, 0, 0.4);
+}
+
+/* ==========================================
+   INTERRUPTEUR VISUEL
+   ========================================== */
+.hidden { 
+    display: none !important; 
+}
+
+.toggle-link {
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.register .toggle-link { color: #1976d2; }
+.login .toggle-link { color: #e65100; }

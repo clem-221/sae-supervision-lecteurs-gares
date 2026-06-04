@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.source-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  display: inline-block;
+  
+  &.server {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+  }
+  
+  &.local {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffe0b2;
+    font-weight: bold;
+  }
+}
+
+.status-banner {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  
+  &.server { background: #e8f5e9; color: #2e7d32; }
+  &.local { background: #ffebee; color: #c62828; border: 2px dashed #ef9a9a; }
+}

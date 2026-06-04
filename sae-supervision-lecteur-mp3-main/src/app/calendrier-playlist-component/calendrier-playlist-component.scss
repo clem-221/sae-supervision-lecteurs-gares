@@ -1,0 +1,29 @@
+.scheduler-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: 80vh;
+
+  .playlist-sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #ddd;
+
+    .playlist-item {
+      padding: 10px;
+      margin-bottom: 8px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: grab;
+      &:active { cursor: grabbing; }
+    }
+  }
+
+  .calendar-main {
+    flex: 3; // Le calendrier prend 75% de la largeur
+    background: white;
+  }
+}

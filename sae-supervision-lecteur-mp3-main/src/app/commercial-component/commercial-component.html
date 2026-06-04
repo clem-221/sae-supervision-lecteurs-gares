@@ -1,0 +1,37 @@
+<div class="admin-container">
+  <hr>
+  <app-calendrier-playlist-component
+    [selectedStationIp]="'172.20.10.12'">
+  </app-calendrier-playlist-component>
+</div>
+
+
+
+<!-- <div class="commercial-container">
+  <h2>Diffusion de Messages & Alertes</h2>
+
+  <div class="alert-grid">
+    @for (station of stations; track station.id) {
+      <div class="station-alert-card">
+        <div class="info">
+          <h3>{{ station.nom }}</h3>
+          <span [class]="'status-dot ' + station.etat"></span>
+        </div>
+
+        <div class="actions">
+          <button class="btn-alert" (click)="broadcastAlert(station)" [disabled]="isSending">
+            🚨 LANCER ALERTE
+          </button>
+          
+          <button class="btn-info" (click)="volumioService.playPlaylist(station.adresseIp, 'INFO_TRAVAUX').subscribe()">
+            📢 Info Travaux
+          </button>
+
+          <button class="btn-stop" (click)="stopAll(station)">
+            🛑 Arrêt Immédiat
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+</div> -->

@@ -1,0 +1,25 @@
+<div class = "admin-container">
+    <h1>Supervision Technique des Gares</h1>
+    
+    <app-tables-stations-component 
+        [stations]="stations" 
+        (actionTriggered)="onControlAction($event.station, $event.action)">>   
+    </app-tables-stations-component>
+
+    <button (click)="refreshAllStations()" class = "btn-refresh">
+        <i class="fas fa-sync"></i> Actualiser toutes les gares
+    </button>
+
+    
+    <app-lecteur-admin></app-lecteur-admin>
+    
+    <hr style="margin: 40px 0;">
+    
+    <app-calendrier-playlist-component
+        [selectedStationIp]="'172.20.10.12'">
+    </app-calendrier-playlist-component>
+
+    <div id="notification" style="position: fixed; top: 20px; right: 20px; background: green; color: white; padding: 10px; display: none;">
+        Fichier ajouté avec succès !
+    </div>
+</div>
