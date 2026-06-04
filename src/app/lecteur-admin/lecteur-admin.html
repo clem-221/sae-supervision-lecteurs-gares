@@ -1,0 +1,58 @@
+<div class="lecteur-container">
+  <!-- IMAGE DE L'ALBUM -->
+  <img 
+    [src]="currentSong.albumart" 
+    alt="Album art" 
+    class="album-art"
+    onerror="this.src='/assets/default-album.png'"
+  >
+
+  <!-- INFOS DE LA CHANSON -->
+  <div class="song-info">
+    <h3 class="title">{{ currentSong.title }}</h3>
+    <p class="artist">{{ currentSong.artist }}</p>
+    <p class="album">{{ currentSong.album }}</p>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status">
+    <span class="status-indicator" [ngClass]="currentSong.status">
+      {{ currentSong.status === 'play' ? '▶ En lecture' : 
+         currentSong.status === 'pause' ? '⏸ Pausé' : 
+         '⏹ Arrêté' }}
+    </span>
+  </div>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="progress-bar">
+    <span class="time">{{ (currentSong.seek / 1000) | number: '2.0-0' }}s</span>
+    <div class="bar">
+      <div class="fill" [style.width]="(currentSong.seek / currentSong.duration * 100) + '%'"></div>
+    </div>
+    <span class="time">{{ (currentSong.duration / 1000) | number: '2.0-0' }}s</span>
+  </div>
+
+  <!-- CONTRÔLES -->
+  <div class="controls">
+    <button (click)="previousTrack()" class="btn btn-control">⏮</button>
+    <button (click)="togglePlayPause()" class="btn btn-play">
+      {{ currentSong.status === 'play' ? '⏸ Pause' : '▶ Play' }}
+    </button>
+    <button (click)="nextTrack()" class="btn btn-control">⏭</button>
+    <button (click)="stop()" class="btn btn-stop">⏹ Stop</button>
+  </div>
+
+  <!-- CONTRÔLE DU VOLUME -->
+  <div class="volume-control">
+    <label>🔊 Volume:</label>
+    <input 
+      type="range" 
+      min="0" 
+      max="100" 
+      [value]="currentSong.volume" 
+      (change)="changeVolume($event.target.valueAsNumber)"
+      class="slider"
+    >
+    <span class="volume-value">{{ currentSong.volume }}%</span>
+  </div>
+</div>

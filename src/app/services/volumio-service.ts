@@ -37,14 +37,14 @@ export class VolumioService {
    * @param cmd La commande (play, stop, pause, etc.)
    */
   sendBasicCommand(ip: string, cmd: string): Observable<any> {
-    return this.http.get(`http://${ip}//v1/commands/?cmd=${cmd}`);
+    return this.http.get(`http://${ip}/api/v1/commands/?cmd=${cmd}`);
   }
 
   // Permet de récupérer les playlists disponibles dans volumio
   naviguerFichier(ip: string, uri: string): Observable<any> {
     // Utilise directement l'IP sans rien devant
     const url = `http://${ip}/api/v1/browse?uri=${encodeURIComponent(uri)}`;
-    console.log("Appel API vers :", url); // Debug pour vérifier l'UR
+    console.log("Appel API vers :", url); // Debug pour vérifier l'URL
     return this.http.get(url);
   }
 
@@ -61,7 +61,7 @@ export class VolumioService {
    * Crucial pour le profil Commercial lors des alertes
    */
   setVolume(ip: string, volume: number): Observable<any> {
-    return this.http.get(`http://${ip}/api/v1/commands/?cmd=volume&value=${volume}`);
+    return this.http.get(`http://${ip}/api/v1/commands/?cmd=volume&volume=${volume}`);
   }
 
   /**

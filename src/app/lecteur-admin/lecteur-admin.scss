@@ -1,0 +1,205 @@
+.lecteur-container {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 450px;
+  margin: 30px auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .album-art {
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .song-info {
+    margin-bottom: 20px;
+
+    .title {
+      margin: 12px 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .artist {
+      margin: 6px 0;
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    .album {
+      margin: 4px 0;
+      font-size: 0.9em;
+      opacity: 0.85;
+      font-style: italic;
+    }
+  }
+
+  .status {
+    margin-bottom: 15px;
+
+    .status-indicator {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      font-weight: bold;
+      font-size: 0.95em;
+
+      &.play {
+        background: rgba(76, 175, 80, 0.4);
+      }
+
+      &.pause {
+        background: rgba(255, 193, 7, 0.4);
+      }
+
+      &.stop {
+        background: rgba(244, 67, 54, 0.4);
+      }
+    }
+  }
+
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 0.85em;
+
+    .time {
+      min-width: 40px;
+      opacity: 0.9;
+    }
+
+    .bar {
+      flex: 1;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      overflow: hidden;
+
+      .fill {
+        height: 100%;
+        background: linear-gradient(90deg, #4CAF50, #8BC34A);
+        transition: width 0.3s ease;
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .btn {
+      padding: 12px 18px;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.35);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &.btn-play {
+        background: rgba(76, 175, 80, 0.6);
+        padding: 14px 25px;
+        border: 2px solid rgba(76, 175, 80, 0.8);
+        font-size: 1.1em;
+
+        &:hover {
+          background: rgba(76, 175, 80, 0.8);
+        }
+      }
+
+      &.btn-stop {
+        background: rgba(244, 67, 54, 0.5);
+        border: 2px solid rgba(244, 67, 54, 0.7);
+
+        &:hover {
+          background: rgba(244, 67, 54, 0.7);
+        }
+      }
+
+      &.btn-control {
+        flex: 1;
+        min-width: 60px;
+      }
+    }
+  }
+
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+
+    label {
+      font-weight: bold;
+      min-width: 60px;
+    }
+
+    .slider {
+      flex: 1;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .volume-value {
+      min-width: 40px;
+      text-align: right;
+      font-weight: bold;
+    }
+  }
+}

@@ -5,12 +5,14 @@ import { StationDataService } from '../services/station-data.services';
 import { catchError, forkJoin, interval, of, startWith, Subscription } from 'rxjs';
 import { CalendrierPlaylistComponent } from "../calendrier-playlist-component/calendrier-playlist-component";
 import { TablesStationsComponent } from '../tables-stations-component/tables-stations-component'; // Vérifie le chemin
+import { LecteurAdmin } from '../lecteur-admin/lecteur-admin';
 
 @Component({
   selector: 'app-admin-component',
   imports: [
     CalendrierPlaylistComponent,
-    TablesStationsComponent
+    TablesStationsComponent,
+    LecteurAdmin
   ],
   templateUrl: './admin-component.html',
   styleUrl: './admin-component.scss',
