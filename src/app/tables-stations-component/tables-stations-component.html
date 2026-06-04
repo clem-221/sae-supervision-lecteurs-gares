@@ -1,0 +1,66 @@
+<table class ="station-table">
+        <thead>
+            <tr>
+                <th>Gare</th>
+                <th>Adresse IP</th>
+                <th>Statut</th>
+                <th>État du lecteur</th>
+                <th>Source de la playlist</th>
+                <th>Playlist en cours</th>
+                <th>Version</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (station of stations; track station.id) {
+                <tr>
+                    <td>{{ station.nom }}</td>
+                    <td><code>{{ station.adresseIp }}</code></td>
+                    <td>
+                        <div class="source-badge" [ngClass]="station.currentSource">
+                           {{ station.currentSource === 'server' ? 'Serveur' : 'Local' }}
+                        </div>
+                    </td>
+                    <td>
+                        <span class="status-badge" [ngClass]="station.etat">
+                            {{ station.etat === 'online' ? '● En ligne' : '○ Hors-ligne' }}
+                        </span>
+                    </td>
+                    <td>
+                        @if (station.trackType === 'webradio') {
+                            <i class="fas fa-radio"></i>
+                        }
+                        {{ station.trackType || 'Inconnu' }}
+                    </td> 
+                    <td>
+                        <span class="playlist-label">
+                        {{ station.currentPlaylist || 'Chargement...' }}
+                        </span>
+                    </td>
+                    <td>{{ station.version || 'Inconnue' }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button (click)="clickToggle(station)" class="btn-control pause" title="Pause">
+                                @if (station.status === 'loading') {
+                                    ⏳
+                                } @else {
+                                    {{ station.status === 'play' ? '⏸️' : '▶️' }}
+                                }
+                            </button>
+                                
+                            <button (click)="onControlAction(station, 'stop')" class="btn-control stop" title="Arrêter">
+                                {{ station.status === 'loading' ?'⏳' : '⏹️'}}
+                            </button>
+                        </div>
+                    </td>   
+                </tr>
+            }@empty {
+            <tr>
+                <td colspan="8" style="text-align: center; padding: 20px;">
+                Aucune gare à afficher (la liste est vide).
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    

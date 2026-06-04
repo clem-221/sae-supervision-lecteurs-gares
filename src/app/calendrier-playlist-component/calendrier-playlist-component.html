@@ -1,0 +1,20 @@
+<h1>Gestion des playlists</h1>
+
+<div class="scheduler-container">
+  <div class="playlist-sidebar">
+    <h3>📁 Playlists Disponibles</h3>
+    <div cdkDropList class="playlist-list">
+      @for (playlist of availablePlaylists; track playlist.uri) {
+        <div class="playlist-item" cdkDrag>
+          <i [class] = "playlist.type === 'folder' ? 'fas fa-folder' : 'fas fa-music'"></i>{{playlist.title}}
+        </div>
+      } @empty {
+            <p>Aucun fichier trouvé dans Internal Storage.</p>
+        }
+    </div>
+  </div>
+
+  <div class="calendar-main">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+</div>

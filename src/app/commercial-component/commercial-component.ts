@@ -1,31 +1,29 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Station } from '../models/station.model';
 import { VolumioService } from '../services/volumio-service';
+import { CalendrierPlaylistComponent } from "../calendrier-playlist-component/calendrier-playlist-component";
 
 @Component({
   selector: 'app-commercial-component',
-  imports: [CommonModule],
+  imports: [
+    CalendrierPlaylistComponent,
+  ],
   templateUrl: './commercial-component.html',
-  styleUrl: './commercial-component.scss',
+  styleUrls: ['./commercial-component.scss'],
 })
-export class CommercialComponent  implements OnInit{
-  stations : Station[] = [];
-  isSending : boolean = false;
+export class CommercialComponent{
+}
 
-  constructor(protected volumioService : VolumioService) {}
-
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     // Liste des gares (à terme, elle viendra d'un service de données centralisé)
     this.stations = [
-      { id: 1, nom: 'Paris Nord', adresseIp: '172.20.10.12', etat: 'online' },
-      { id: 2, nom: 'Saint-Denis', adresseIp: '172.20.10.13', etat: 'online' }
+      { id: 1, nom: 'Paris Nord', adresseIp: '172.20.10.5', etat: 'online' },
+      { id: 2, nom: 'Saint-Denis', adresseIp: '172.20.10.3', etat: 'online' }
     ];
   }
 
   /**
    * Méthode d'urgence : Volume max + Message d'alerte
-   */
+   *
   broadcastAlert(station: Station) {
     this.isSending = true;
     
@@ -46,5 +44,4 @@ export class CommercialComponent  implements OnInit{
 
   stopAll(station: Station) {
     this.volumioService.sendBasicCommand(station.adresseIp, 'stop').subscribe();
-  }
-}
+  } */

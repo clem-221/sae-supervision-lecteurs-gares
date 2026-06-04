@@ -28,3 +28,17 @@
     }
   }
 }
+
+.logo div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Contrôle précisément l'espace entre TOUS les éléments à l'intérieur */
+  
+  h4, h6 {
+    margin: 0; /* On remet les marges à zéro pour laisser le 'gap' gérer l'espace */
+  }
+
+  h6{
+    font-weight: normal;
+  }
+}

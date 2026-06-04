@@ -10,14 +10,14 @@ export class StationDataService {
     { 
       id: 1, 
       nom: 'Paris Nord', 
-      adresseIp: '172.20.10.12', // Mettez la vraie IP ici
-      etat: 'online',
+      adresseIp: '172.20.10.12', 
+      etat: 'offline',
       currentSource: 'local'
     },
     { 
       id: 2, 
       nom: 'Saint-Denis', 
-      adresseIp: '172.20.10.5', // Mettez la vraie IP ici
+      adresseIp: '172.20.10.12', 
       etat: 'online',
       currentSource: 'server'
     }

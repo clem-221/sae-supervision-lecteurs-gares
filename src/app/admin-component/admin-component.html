@@ -1,47 +1,21 @@
 <div class = "admin-container">
     <h1>Supervision Technique des Gares</h1>
-    <span class="refresh-indicator">🔄 Prochaine actualisation automatique...</span>
     
-    <table class ="station-table">
-        <thead>
-            <tr>
-                <th>Gare</th>
-                <th>Adresse IP</th>
-                <th>Statut</th>
-                <th>État du lecteur</th>
-                <th>Playlist en cours</th>
-                <th>Version</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (station of stations; track station.id) {
-                <tr>
-                    <td>{{ station.nom }}</td>
-                    <td><code>{{ station.adresseIp }}</code></td>
-                    <td>
-                        <div class="source-badge" [ngClass]="station.currentSource">
-                            {{ station.currentSource === 'server' ? 'Serveur' : 'Local' }}
-                        </div>
-                    </td>
-                    <td>
-                        <span class="status-badge" [ngClass]="station.etat">
-                            {{ station.etat === 'online' ? '● En ligne' : '○ Hors-ligne' }}
-                        </span>
-                    </td> 
-                    <td>
-                        <span class="playlist-label">
-                        {{ station.currentPlaylist || 'Chargement...' }}
-                        </span>
-                    </td>
-                    <td>{{ station.version || 'Inconnue' }}</td>
-                    <td>
-                        <button (click)="refreshStatus(station)">Actualiser</button>
-                        <button class="btn-stop" (click)="stopAndRefresh(station)">
-                            Arrêter
-                        </button>
-                    </td>   
-                </tr>
-            }
-        </tbody>
-    </table>
+    <app-tables-stations-component 
+        [stations]="stations" 
+        (actionTriggered)="onControlAction($event.station, $event.action)">>   
+    </app-tables-stations-component>
+
+    <button (click)="refreshAllStations()" class = "btn-refresh">
+        <i class="fas fa-sync"></i> Actualiser toutes les gares
+    </button>
+
+    <hr style="margin: 40px 0;">
+    <app-calendrier-playlist-component
+        [selectedStationIp]="'172.20.10.12'">
+    </app-calendrier-playlist-component>
+
+    <div id="notification" style="position: fixed; top: 20px; right: 20px; background: green; color: white; padding: 10px; display: none;">
+        Fichier ajouté avec succès !
+    </div>
 </div>
