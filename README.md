@@ -1,3 +1,26 @@
+```text
+
+Projet : Supervision Audio
+
+Stack utilisée
+Frontend : typescript/HTML/CSS/ANGULAR
+Backend : PYTHON/PHP/VOLUMIO et SNAPCAST (SNAPSERVER et SNAP CLIENT)
+
+```text
+[ Front-End ]
+      |
+      |
+      V
+[ Appareil MASTER ]---------------------(snapclient)---------- [ Appareil Client 1 ] (Volumio )
+  (Volumio-snapserver)                  |
+                                        |
+                                        |----(snapclient)------- [ Appareil Client 2 ] (Volumio )
+
+
+
+
+
+
 # ApplicationGestionLecteursAudio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
