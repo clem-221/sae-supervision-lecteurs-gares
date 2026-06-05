@@ -24,7 +24,7 @@ export class LecteurAdmin implements OnInit, OnDestroy {
   };
 
   private refreshSubscription: Subscription | undefined;
-  private readonly IP_STATION = '172.20.10.12';
+  private readonly IP_STATION = '172.20.10.3';
 
   constructor(private volumioService: VolumioService) {}
 

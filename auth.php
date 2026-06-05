@@ -1,6 +1,19 @@
     <?php
     session_start();
+
     require_once("database.php");
+    require_once("vendor/autoload.php");
+    require_once "config/cors.php";
+
+    use Firebase\JWT\JWT;
+
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
+    define('JWT_SECRET', 'supervision_sae_secret_key_2026_05');
+
+    $message = "";
+
     require_once("vendor/autoload.php");
     require_once "config/cors.php";
 

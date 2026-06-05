@@ -10,7 +10,7 @@ export class StationDataService {
     { 
       id: 1, 
       nom: 'Paris Nord', 
-      adresseIp: '172.20.10.12', 
+      adresseIp: '172.20.10.3', 
       etat: 'offline',
       currentSource: 'local'
     },

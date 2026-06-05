@@ -1,9 +1,44 @@
 <div class="admin-container">
-  <hr>
+  <!-- Convertisseur MP3 YouTube -->
+  <div class="mp3-converter-section">
+    <h2>🎵 Convertisseur YouTube MP3</h2>
+    
+    <div class="converter-form">
+      <div class="input-group">
+        <input 
+          type="text" 
+          [(ngModel)]="youtubeUrl"
+          placeholder="Collez l'URL YouTube ici..."
+          class="url-input"
+          [disabled]="isDownloading"
+          (keyup.enter)="downloadMp3()"
+        >
+        <button 
+          (click)="downloadMp3()"
+          [disabled]="isDownloading"
+          class="btn-download"
+        >
+          {{ isDownloading ? '⏳ Téléchargement...' : '⬇️ Télécharger MP3' }}
+        </button>
+      </div>
+
+      <!-- Message de statut -->
+      @if (downloadMessage) {
+        <div [class]="'download-status ' + (downloadSuccess ? 'success' : 'error')">
+          {{ downloadMessage }}
+        </div>
+      }
+    </div>
+
+    <hr>
+  </div>
+
+  <!-- Calendrier Playlist (existant) -->
   <app-calendrier-playlist-component
     [selectedStationIp]="'172.20.10.12'">
   </app-calendrier-playlist-component>
 </div>
+
 
 
 
