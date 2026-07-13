@@ -115,6 +115,8 @@ Pour lancer le serveur de développement, faire :
 ng serve
 ```
 Une fois le serveur lancé, ouvrir le navigateur et taper à la barre de recherche : `http://localhost:4200/`. L'application se recharge automatiquement lorsqu'une modification est apportée sur l'un des fichiers source.
+```
+```
 Projet tutoré réalisé par :
 
 ```
