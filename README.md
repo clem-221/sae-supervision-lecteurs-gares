@@ -46,13 +46,15 @@ le réglage du volume.
 Ce projet a été une occasion pour moi d'apprendre l'utilisation du framework Angular, mais aussi à pouvoir exploiter les
 informations reçues à travers un API 
 
+
+
+```
 ![Visuel du tableau de bord pour la Supervision Techniques des Gares](screenshots/Supervision_lecteurs_gares_admin_1.png)
 ![Visuel du lecteur audio de l'une des gares](screenshots/Supervision_lecteurs_gares_admin_2.png)
 ![Visuel du calendrier et des playlists](screenshots/Supervision_lecteurs_admin_3.png)
 ![Visuel de la page retail](screenshots/Supervision_lecteurs_gares_retail.png)
 ![Visuel de la page commercial](screenshots/Supervision_lecteurs_gares_commercial.png)
 
-```
 ## Stacks utilisés
 
 ```text
