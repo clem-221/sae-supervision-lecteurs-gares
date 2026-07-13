@@ -1,5 +1,11 @@
 
 Projet : Supervision Audio
+
+```
+Description de la SAÉ :
+
+```
+
 ```text
 Stack utilisée
 Frontend : typescript/HTML/CSS/ANGULAR
@@ -52,7 +58,7 @@ sudo systemctl restart snapclient
 
 # ApplicationGestionLecteursAudio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+Ce projet a été réalisé avec [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
 
 ```
 
