@@ -105,3 +105,10 @@ Pour lancer le serveur de développement, faire :
 
 ```bash
 ng serve
+```
+Projet tutoré réalisé par :
+
+```
+Fousseynou SIDIBÉ - Responsable base de données, login et distribution des rôles des utilisateurs
+Hani ROULA - Responsable métier backend et du visuel du lecteur mp3
+Clément SENE - Responsable frontend
