@@ -44,7 +44,7 @@ Ce projet a été une occasion pour moi d'apprendre l'utilisation du framework A
 informations reçues à travers un API 
 
 ```
-Stack utilisée
+Stacks utilisés
 
 ```text
 Frontend : typescript/HTML/CSS/ANGULAR
@@ -88,7 +88,7 @@ sudo systemctl restart snapserver
 sudo apt-get update
 sudo apt-get install snapclient
 
-désactivé le snapserver si il est installé : sudo systemctl disable --now snapserver
+désactiver le snapserver si il est installé : sudo systemctl disable --now snapserver
 sudo nano /etc/default/snapclient
 SNAPCLIENT_OPTS="-h IP_volumio_qu'on_trouve_sur_reseau"
 
