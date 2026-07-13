@@ -1,5 +1,4 @@
-# Projet : Supervision Audio
-
+# Projet : Supervision Audio synchrone et asynchrone de lecteurs en gare
 
 ## Description de la SAÉ :
 ```
@@ -26,6 +25,7 @@ calendrier précis
 
 ```
 ## Apport personnel de Clément SENE:
+
 ```
 Personnellement, j'étais en charge de la partie front de l'application, en m'assurant d'avoir un visuel accessible
 à tous les utilisateurs et ainsi de rendre beaucoup plus agréable l'expérience utilisateur.
