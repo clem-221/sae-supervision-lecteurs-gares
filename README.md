@@ -72,7 +72,7 @@ Backend : PYTHON/PHP/VOLUMIO et SNAPCAST (SNAPSERVER et SNAP CLIENT)
 
 
 configuration de snapcast : 
-1-sur la machiner master : ssh@volumio.(add_ip_volumio_qu'ontrouve_sur_reseau)
+1-sur la machine master : ssh@volumio.(add_ip_volumio_qu'ontrouve_sur_reseau)
 
 sudo apt-get update
 sudo apt-get install snapserver
