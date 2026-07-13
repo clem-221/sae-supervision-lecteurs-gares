@@ -1,9 +1,4 @@
-Projet : Supervision Audio
-
-Stack utilisée
-
-
-Projet : Supervision Audio
+Projet : Supervision Audio synchrone et asynchrone de lecteurs en gare
 
 
 Description de la SAÉ :
@@ -105,8 +100,6 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
-To start a local development server, run:
-
 ```
 
 Pour lancer le serveur de développement, faire :
@@ -123,4 +116,3 @@ Projet tutoré réalisé par :
 Fousseynou SIDIBÉ - Responsable base de données, login et distribution des rôles des utilisateurs
 Hani ROULA - Responsable métier backend et du visuel du lecteur mp3
 Clément SENE - Chef de projet et responsable frontend
->>>>>>> 9a00b79ff73de63f1b4e224cf0857554c75f0229
