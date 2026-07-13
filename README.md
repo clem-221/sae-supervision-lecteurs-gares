@@ -25,6 +25,9 @@ toutes ses composantes
 calendrier précis
 -le commercial qui fait passer les différentes alertes et annonces urgentes
 
+```
+Apport personnel de Clément SENE :
+```
 Personnellement, j'étais en charge de la partie front de l'application, en m'assurant d'avoir un visuel accessible
 à tous les utilisateurs et ainsi de rendre beaucoup plus agréable l'expérience utilisateur.
 Avec l'aide du framework Angular que j'ai appris en autonomie, j'ai utilisé les compétences de bases acquises afin
