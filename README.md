@@ -1,6 +1,6 @@
 
 Projet : Supervision Audio
-
+```text
 Stack utilisée
 Frontend : typescript/HTML/CSS/ANGULAR
 Backend : PYTHON/PHP/VOLUMIO et SNAPCAST (SNAPSERVER et SNAP CLIENT)
@@ -16,7 +16,7 @@ Backend : PYTHON/PHP/VOLUMIO et SNAPCAST (SNAPSERVER et SNAP CLIENT)
                                         |----(snapclient)------- [ Appareil Client 2 ] (Volumio )
 
 
-```
+
 configuration de snapcast : 
 1-sur la machiner master : ssh@volumio.(add_ip_volumio_qu'ontrouve_sur_reseau)
 
@@ -50,17 +50,12 @@ SNAPCLIENT_OPTS="-h IP_volumio_qu'on_trouve_sur_reseau"
 sudo systemctl restart snapclient
 
 
-
-
-
-
-
-
 # ApplicationGestionLecteursAudio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
 
 ## Development server
+```
 
 To start a local development server, run:
 
