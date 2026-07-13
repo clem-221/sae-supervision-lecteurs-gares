@@ -3,6 +3,7 @@ Projet : Supervision Audio
 
 
 Description de la SAÉ :
+```
 Le projet tutoré du module (par groupe de 3 personnes) porte sur la supervision de lecteurs audio multi-sites.
 
 Contexte professionnel :
@@ -33,7 +34,7 @@ le réglage du volume.
 
 Ce projet a été une occasion pour moi d'apprendre l'utilisation du framework Angular, mais aussi à pouvoir exploiter les informations reçues à travers un API 
 
-
+```
 
 ```text
 Stack utilisée
