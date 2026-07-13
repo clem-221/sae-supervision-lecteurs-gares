@@ -44,9 +44,9 @@ Ce projet a été une occasion pour moi d'apprendre l'utilisation du framework A
 informations reçues à travers un API 
 
 ```
+Stack utilisée
 
 ```text
-Stack utilisée
 Frontend : typescript/HTML/CSS/ANGULAR
 Backend : PYTHON/PHP/VOLUMIO et SNAPCAST (SNAPSERVER et SNAP CLIENT)
 
