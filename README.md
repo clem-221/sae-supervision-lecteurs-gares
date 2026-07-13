@@ -17,7 +17,7 @@ Le système web devra permettre de :
 -consigner des événements de diffusion ;
 -déclencher des alertes simples ;
 
-Notre groupe a choisi de se basé sur le système de supervision de lecteurs audio dans les gares. Pour ce faire, nous
+Notre groupe a choisi de se baser sur un système de supervision de lecteurs audio dans les gares. Pour ce faire, nous
 avons ciblé trois utilisateurs principaux de l'application:
 -l'administrateur IT qui est chargé de faire la veille de l'application afin de s'assurer du bon fonctionnement de
 toutes ses composantes
@@ -26,10 +26,11 @@ calendrier précis
 -le commercial qui fait passer les différentes alertes et annonces urgentes
 
 Personnellement, j'étais en charge de la partie front de l'application, en m'assurant d'avoir un visuel accessible
- à tous les utilisateurs et ainsi de rendre beaucoup plus agréable l'expérience utilisateur.
+à tous les utilisateurs et ainsi de rendre beaucoup plus agréable l'expérience utilisateur.
 Avec l'aide du framework Angular que j'ai appris en autonomie, j'ai utilisé les compétences de bases acquises afin
- de diviser toutes les parties en différentes composantes qui se complètent chacune gràaces aux importations
+de diviser toutes les parties en différentes composantes qui se complètent chacune gràaces aux importations
 de classes. Les différentes pages sont relié à l'aide de routes que Angular nous permet de configurer plus facilement.
+
 J'ai aussi mis en place le calendrier avec un système de glisser-déposer afin de pouvoir mettre les différentes
 playlists dans le calendrier et aussi de pouvoir déterminer leurs durées en aggrandissant leurs blocs respectifs.
 Grâce à l'utilisation de l'API de Volumio, nous avons pu récupérer les informations des morceaux en cours à savoir :
